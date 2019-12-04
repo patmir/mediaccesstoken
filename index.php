@@ -46,7 +46,7 @@ class PatternSaver
         if (strlen($pattern) < 5) {
             die("Zbyt krótki wzorzecz (min. 5 znaków)");
         }
-        if (preg_match('/[^LSC]/', $key)) {
+        if (preg_match('/^[LSC]+$/', $key)) {
             die("Zły format wzorca. Dopuszczalne litery to: L, S, C");
         }
         $patternFile = fopen("pattern", "w") or die("Brak dostępu do pliku wzorca! Sprawdź CHMOD'a.");

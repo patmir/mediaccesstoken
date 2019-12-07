@@ -81,17 +81,7 @@ $showError = false;
     $title = $polecenieLogowania;
     include_once("src/header.php");
     include_once("src/login.php");
-
-    ?>
-<?php } ?>
-<script type="text/javascript">
-    $(document).ready(function() {
-
-        let showError = function(msg) {
-
-        }
-    });
-</script>
+} ?>
 </body>
 
 </html>

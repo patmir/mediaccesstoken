@@ -14,7 +14,9 @@ $tekstWStopce = "© 2019"; // Stopka
 /** Polecenia i Wiadomości */
 $polecenieLogowania = "Podaj Token"; // Widoczne nad polem do wpisania tokenu
 $przyciskLogowania = "Wejdź";
-$przyciskLogowaniaWeryfikacja = "Weryfikacja";
+$przyciskLogowaniaWeryfikacja = "Weryfikacja...";
+$przyciskLogowaniaZlyToken = "Zły Token!";
+$przyciskLogowaniaOk = "OK";
 
 $przyciskPobierz = "Pobierz";
 

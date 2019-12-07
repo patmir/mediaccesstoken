@@ -2,11 +2,10 @@
     <div class="col">
         <form class="form-signin" id="podaj-token">
 
-            <h1 class="h2 mb-4 font-weight-normal">Podaj Token</h1>
+            <h1 class="h2 mb-4 font-weight-normal"><?= $polecenieLogowania; ?></h1>
             <label for="t" class="sr-only">Token</label>
             <input type="text" id="t" name="t" class="form-control" placeholder="Token" required>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="button-token">Wejdź</button>
-
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="button-token"><?= $przyciskLogowania; ?></button>
         </form>
     </div>
 </div>
@@ -33,12 +32,12 @@
                     $("#button-token")
                         .addClass("btn-warning")
                         .removeClass("btn-primary btn-success btn-danger")
-                        .html("Weryfikacja...");
+                        .html("<?= $przyciskLogowaniaWeryfikacja; ?>");
                 }
             }).done(function(resp) {
                 if (resp == "OK") {
                     $("#button-token").addClass("btn-success").removeClass("btn-warning")
-                        .html("OK");
+                        .html("<?= $przyciskLogowaniaOk; ?>");
                     setTimeout(function() {
                         var cleanUrl = actionurl.replace(/#.*$/, '').replace(/\?.*$/, '');
                         cleanUrl += "?t=" + token;
@@ -46,7 +45,7 @@
                     }, 1000);
                 } else {
                     $("#button-token").addClass("btn-danger").removeClass("btn-warning")
-                        .html("Zły Token!");
+                        .html("<?= $przyciskLogowaniaZlyToken; ?>");
                     setTimeout(function() {
                         $("#button-token").html("Wejdź").addClass("btn-primary").removeClass("btn-danger");
                     }, 2000);

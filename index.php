@@ -35,7 +35,7 @@
 include_once("config.php");
 include_once("src/core.php");
 $title = "Token";
-
+$errorMessage = "";
 /** POST
  * 
  * Ogarniamy generowanie tokenu lub wyświetlanie zdjęcia
@@ -59,14 +59,19 @@ if (isset($_POST['vt'])) {
     $ps->savePattern($nw, $k);
 }
 // Będzie login lub display
+$showError = false;
 ?>
 <?php if (isset($_GET['t'])) {
     //Mamy token
     $token = $_GET['t'];
     $file = (new PatternMatcher())->MatchFile($token);
     if ($file < 0) {
+        $showError = true;
+        $errorMessage = $file == -1 ? $zlyToken : $brakPliku;
         // Mamy cyrk z tokenem, pokazujemy stronę logowania z błędem
-
+        $title = $polecenieLogowania;
+        include_once("src/header.php");
+        include_once("src/login.php");
     } else {
         $title = "Plik dla " . $token;
         include_once("src/header.php");

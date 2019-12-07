@@ -11,8 +11,23 @@
 </head>
 
 <body class="text-center">
-    <div class="position-relative overflow-hidden p-10 p-md-10 m-md-10 text-center">
-        <div class="col-md-12 p-lg-12 mx-auto my-12">
-            <img class="mb-4" src="src/logo.png" alt="logo">
-            <h1 class="display-4 font-weight-normal"><?= $nazwaWydarzenia; ?></h1>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="alert alert-danger alert-dismissible show fade <?= !$showError ? "d-none" : ""; ?> role=" alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="alert-heading">Uwaga!</h4>
+                    <p id="alert-message"><?= $errorMessage; ?></p>
+                    <hr>
+                    <p class="mb-0">Spróbuj ponownie.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mb-4">
+            <div class="col-10 col-sm-12">
+                <img class="mb-3" src="src/logo.png" alt="logo">
+                <h1 class="display-4 font-weight-normal"><?= $nazwaWydarzenia; ?></h1>
+            </div>
         </div>

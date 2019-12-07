@@ -17,3 +17,7 @@ $przyciskLogowania = "Wejdź";
 $przyciskLogowaniaWeryfikacja = "Weryfikacja";
 
 $przyciskPobierz = "Pobierz";
+
+/** Błędy */
+$zlyToken = "Podano zły token!";
+$brakPliku = "Nie znaleziono pliku!";

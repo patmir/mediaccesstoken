@@ -1,11 +1,20 @@
-<form class="form-signin" id="podaj-token">
+<div class="row justify-content-center">
+    <div class="col">
+        <form class="form-signin" id="podaj-token">
 
-    <h1 class="h2 mb-4 font-weight-normal">Podaj Token</h1>
-    <label for="t" class="sr-only">Token</label>
-    <input type="text" id="t" name="t" class="form-control" placeholder="Token" required>
-    <button class="btn btn-lg btn-primary btn-block" type="submit" id="button-token">Wejdź</button>
-    <p class="mt-5 mb-3 text-muted"><?= $tekstWStopce ?></p>
-</form>
+            <h1 class="h2 mb-4 font-weight-normal">Podaj Token</h1>
+            <label for="t" class="sr-only">Token</label>
+            <input type="text" id="t" name="t" class="form-control" placeholder="Token" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="button-token">Wejdź</button>
+
+        </form>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col">
+        <p class="mt-5 mb-3 font-weight-bold"><?= $tekstWStopce ?></p>
+    </div>
+</div>
 </div>
 <script type="text/javascript">
     $(document).ready(function() {

@@ -32,7 +32,7 @@
  * 
  * For more information, please refer to <https://unlicense.org>
  */
-include_once("config.php");
+include_once("custom/config.php");
 include_once("src/core.php");
 $title = "Token";
 $errorMessage = "";

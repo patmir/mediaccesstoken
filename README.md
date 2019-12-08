@@ -24,37 +24,37 @@ W pliku tym znajduje się seria zmiennych , które określają wyświetlane teks
 
 ## Klucz dostępu
 
-Określony w zmiennej $klucz jest hasłem, który pozwala na zdalne zapisanie wzorca. Może się składać z takiej samej kombinacji znaków, jak wzorzec.
+Określony w zmiennej \$klucz jest hasłem, który pozwala na zdalne zapisanie wzorca. Może się składać z takiej samej kombinacji znaków, jak wzorzec.
 
 ## Teksty
 
 Poniższe teksty wyświetlane są w poszczególnych miejscach na stronie.
 
-$nazwaWydarzenia – Tytuł udostępnianego wydarzenia.
+\$nazwaWydarzenia – Tytuł udostępnianego wydarzenia.
 
-$tekstWStopce - Treść stopki, widocznej w dolnej części strony.
+\$tekstWStopce - Treść stopki, widocznej w dolnej części strony.
 
-$polecenieLogowania – Tekst widoczny nad polem do wpisania tokenu.
+\$polecenieLogowania – Tekst widoczny nad polem do wpisania tokenu.
 
-$przyciskLogowania – Tekst widoczny na przycisku logowania
+\$przyciskLogowania – Tekst widoczny na przycisku logowania
 
-$przyciskLogowaniaWeryfikacja - Tekst widoczny na przycisku logowania podczas weryfikacji tokenu.
+\$przyciskLogowaniaWeryfikacja - Tekst widoczny na przycisku logowania podczas weryfikacji tokenu.
 
-$przyciskLogowaniaZlyToken - Tekst informujący o podaniu złego tokenu.
+\$przyciskLogowaniaZlyToken - Tekst informujący o podaniu złego tokenu.
 
-$przyciskLogowaniaOk - Tekst informujący o pozytywnej weryfikacji tokenu.
+\$przyciskLogowaniaOk - Tekst informujący o pozytywnej weryfikacji tokenu.
 
-$przyciskLogowaniaBrakPliku - Tekst informujący o braku pliku, mimo podania tokenu zgodnego ze wzorcem.
+\$przyciskLogowaniaBrakPliku - Tekst informujący o braku pliku, mimo podania tokenu zgodnego ze wzorcem.
 
-$przyciskPobierz – Tekst widoczny na przycisku pobrania materiału.
+\$przyciskPobierz – Tekst widoczny na przycisku pobrania materiału.
 
-$zlyToken  - Komunikat błędu po podaniu tokenu niezgodnego ze wzorcem.
+\$zlyToken - Komunikat błędu po podaniu tokenu niezgodnego ze wzorcem.
 
-$brakPliku = Komunikat błędu po podaniu tokenu zgodnego ze wzorcem, ale niepasującego do żadnego z plików.
+\$brakPliku = Komunikat błędu po podaniu tokenu zgodnego ze wzorcem, ale niepasującego do żadnego z plików.
 
-$tytulBledu = Tytuł komunikatu z błędem.
+\$tytulBledu = Tytuł komunikatu z błędem.
 
-$polecenieBledu = Polecenie po komunikacie z błędem.
+\$polecenieBledu = Polecenie po komunikacie z błędem.
 
 ## Styl
 
@@ -72,9 +72,9 @@ Pod **C** yframi mogą znajdować się wszystkie cyfry arabskie.
 
 Pod **S** ymbolem może znajdować się jeden z poniższych znaków:
 
-\_ **$ - + = ! @**
+\_ **\$ - + = ! @**
 
-Wzorzec zapisany jest w pliku **p**** attern **w folderze** custom**.
+Wzorzec zapisany jest w pliku **p\*\*** attern **w folderze** custom\*\*.
 
 ## Zdalne zapisywanie wzorca
 

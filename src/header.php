@@ -2,6 +2,10 @@
 <html lang="pl">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<?= $nazwaWydarzenia; ?>">
+    <meta name="author" content="Patryk Mirosław 2019; miroslaw.patryk@gmail.com">
     <title><?= $title; ?></title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -12,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-light sticky-top py-1">
+    <nav class="navbar navbar-expand navbar-light bg-light sticky-top">
         <div class="container d-flex flex-column flex-md-row align-items-center justify-content-<?= isset($file) ? "between" : "around"; ?>"">
             <a class=" py-2 d-sm-block d-md-inline-block <?= isset($file) ? "" : "navbar-brand"; ?>" href="#">
             <img src="custom/logo.png" class="nav-logo img-fluid d-inline-block align-top" alt="logo" />

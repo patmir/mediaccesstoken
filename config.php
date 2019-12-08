@@ -6,7 +6,7 @@
  * Należy zmieniać tylko wartości po znaku równości (=) i/lub w cudzysłowiu
  * 
  */
-
+$klucz = "G2C3xDxw"; // Klucz do zapisywania wzorca
 /** Widoczne Teksty */
 $nazwaWydarzenia = "Nazwa Wydarzenia"; // Widoczne pod logiem
 $tekstWStopce = "© 2019"; // Stopka

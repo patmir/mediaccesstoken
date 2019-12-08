@@ -1,20 +1,15 @@
-<div class="row justify-content-center">
-    <div class="col">
-        <form class="form-signin" id="podaj-token">
+<div class="container d-flex flex-column py-2 align-content-center text-center">
+    <form class="form-signin d-flex flex-column py-2 align-content-center" id="podaj-token">
 
-            <h1 class="h2 mb-4 font-weight-normal"><?= $polecenieLogowania; ?></h1>
-            <label for="t" class="sr-only">Token</label>
-            <input type="text" id="t" name="t" class="form-control" placeholder="Token" required>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" id="button-token"><?= $przyciskLogowania; ?></button>
-        </form>
-    </div>
+        <h1 class="h2 py-2 d-block font-weight-normal"><?= $polecenieLogowania; ?></h1>
+        <label for="t" class="sr-only">Token</label>
+        <input type="text" id="t" name="t" class="form-control my-2 d-block " placeholder="Token" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="button-token"><?= $przyciskLogowania; ?></button>
+    </form>
 </div>
-<div class="row justify-content-center">
-    <div class="col">
-        <p class="mt-5 mb-3 font-weight-bold"><?= $tekstWStopce ?></p>
-    </div>
-</div>
-</div>
+<footer class="text-center d-flex flex-row justify-content-center align-content-center">
+    <p class="mt-5 mb-3 font-weight-bold"><?= $tekstWStopce ?></p>
+</footer>
 <script type="text/javascript">
     $(document).ready(function() {
         $("#podaj-token").on('submit', function(e) {

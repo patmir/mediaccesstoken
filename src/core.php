@@ -3,7 +3,13 @@
 class PatternSaver
 {
     private $secret = 'G2C3xDxw';
-
+    function __construct()
+    {
+        global $klucz;
+        if (isset($klucz)) {
+            $this->secret = $klucz;
+        }
+    }
 
     // ^(.*[A-Z]{3})(.*[_$\-+=!@]{1})(.*\d{5})$
     function savePattern($pattern, $key)
@@ -17,7 +23,7 @@ class PatternSaver
         if (preg_match('/^[LSC]+$/', $key)) {
             die("Zły format wzorca. Dopuszczalne litery to: L, S, C");
         }
-        $patternFile = fopen("pattern", "w") or die("Brak dostępu do pliku wzorca! Sprawdź CHMOD'a.");
+        $patternFile = fopen("custom/pattern", "w") or die("Brak dostępu do pliku wzorca! Sprawdź CHMOD'a.");
         fwrite($patternFile, $pattern);
         fclose($patternFile);
         die("OK");
@@ -74,8 +80,8 @@ class PatternMatcher
     }
     private function loadPattern()
     {
-        $patternFile = fopen("pattern", "r") or die("Brak dostępu do pliku wzorca! Sprawdź CHMOD'a.");
-        return fread($patternFile, filesize("pattern"));
+        $patternFile = fopen("custom/pattern", "r") or die("Brak dostępu do pliku wzorca! Sprawdź CHMOD'a.");
+        return fread($patternFile, filesize("custom/pattern"));
     }
     public function VerifyToken($token)
     {

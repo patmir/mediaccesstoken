@@ -41,12 +41,14 @@ $errorMessage = "";
  * Ogarniamy generowanie tokenu lub wyświetlanie zdjęcia
  */
 if (isset($_POST['vt'])) {
-    $res = (new PatternMatcher())->VerifyToken($_POST['vt']);
+    $res = (new PatternMatcher())->MatchFile($_POST['vt']);
 
-    if ($res !== 1) {
-        die("Błędny token!");
+    if (!is_numeric($res) && strlen($res) > 1) {
+        die($przyciskLogowaniaOk);
+    } else if ($res == -2) {
+        die($przyciskLogowaniaBrakPliku);
     } else {
-        die("OK");
+        die($przyciskLogowaniaZlyToken);
     }
 } else if (isset($_GET['nw']) && isset($_GET['k'])) {
     // Mamy wzorzec i klucz

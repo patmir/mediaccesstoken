@@ -1,3 +1,7 @@
+<?php
+// Czy mamy plik (wyświetlanie przycisku pobierz)?
+$pokazPobierz = isset($file) && !is_numeric($file); // $file będzie <0 jeśli jest jakiś błąd z tokenem
+?>
 <!doctype html>
 <html lang="pl">
 
@@ -17,24 +21,26 @@
 
 <body>
     <nav class="navbar navbar-expand navbar-light bg-light sticky-top">
-        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-<?= isset($file) ? "between" : "around"; ?>"">
-            <a class=" py-2 d-sm-block d-md-inline-block <?= isset($file) ? "" : "navbar-brand"; ?>" href="#">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-<?= $pokazPobierz ? "between" : "around"; ?>"">
+            <a class=" py-2 d-sm-block d-md-inline-block <?= $pokazPobierz ? "" : "navbar-brand"; ?>" href="#">
             <img src="custom/logo.png" class="nav-logo img-fluid d-inline-block align-top" alt="logo" />
             </a>
             <span class="navbar-text py-2 d-sm-block d-md-inline-block font-weight-bold h2 text-break text-center"><?= $nazwaWydarzenia; ?></span>
-            <?php if (isset($file)) : ?>
+            <?php if ($pokazPobierz) : ?>
                 <a class="btn btn-lg py-2 d-sm-block d-md-inline-block btn-outline-success" type="button" id="button-pobierz" href="<?= $file ?>" download><?= $przyciskPobierz; ?></a>
             <?php endif; ?>
         </div>
     </nav>
     <div class="container py-2">
-        <div class="alert alert-danger alert-dismissible show fade <?= !$showError ? "d-none" : ""; ?> role=" alert">
+        <div class="alert alert-danger alert-dismissible show fade <?= !$showError ? "d-none" : ""; ?>" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="alert-heading">Uwaga!</h4>
+            <h4 class="alert-heading"><?= $tytulBledu; ?></h4>
             <p id="alert-message"><?= $errorMessage; ?></p>
-            <hr>
-            <p class="mb-0">Spróbuj ponownie.</p>
+            <?php if (isset($polecenieBledu) && strlen($polecenieBledu) > 1) : ?>
+                <hr>
+                <p class="mb-0"><?= $polecenieBledu; ?></p>
+            <?php endif; ?>
         </div>
     </div>

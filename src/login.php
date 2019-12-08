@@ -32,7 +32,7 @@
             }).done(function(resp) {
                 if (resp == "OK") {
                     $("#button-token").addClass("btn-success").removeClass("btn-warning")
-                        .html("<?= $przyciskLogowaniaOk; ?>");
+                        .html(resp);
                     setTimeout(function() {
                         var cleanUrl = actionurl.replace(/#.*$/, '').replace(/\?.*$/, '');
                         cleanUrl += "?t=" + token;
@@ -40,9 +40,9 @@
                     }, 1000);
                 } else {
                     $("#button-token").addClass("btn-danger").removeClass("btn-warning")
-                        .html("<?= $przyciskLogowaniaZlyToken; ?>");
+                        .html(resp);
                     setTimeout(function() {
-                        $("#button-token").html("Wejdź").addClass("btn-primary").removeClass("btn-danger");
+                        $("#button-token").html("<?= $przyciskLogowania; ?>").addClass("btn-primary").removeClass("btn-danger");
                     }, 2000);
 
 

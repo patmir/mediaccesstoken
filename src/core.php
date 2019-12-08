@@ -18,7 +18,7 @@ class PatternSaver
             die("Zły klucz!");
         }
         if (strlen($pattern) < 4) {
-            die("Zbyt krótki wzorzecz (min. 4 znaków)");
+            die("Zbyt krótki wzorzec (min. 4 znaków)");
         }
         if (preg_match('/^[LSC]+$/', $key)) {
             die("Zły format wzorca. Dopuszczalne litery to: L, S, C");

@@ -17,9 +17,12 @@ $przyciskLogowania = "Wejdź";
 $przyciskLogowaniaWeryfikacja = "Weryfikacja...";
 $przyciskLogowaniaZlyToken = "Zły Token!";
 $przyciskLogowaniaOk = "OK";
+$przyciskLogowaniaBrakPliku = "Brak pliku!";
 
 $przyciskPobierz = "Pobierz";
 
 /** Błędy */
 $zlyToken = "Podano zły token!";
 $brakPliku = "Nie znaleziono pliku!";
+$tytulBledu = "Uwaga!";
+$polecenieBledu = "Spróbuj ponownie"; // Jeśli jako wartośc poda się pusty ciąg, np "" lub null, polecenie i oddzielnik nie zostanie wyświetlone.
